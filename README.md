@@ -1,1 +1,1 @@
-# py-finance
+# py-economics
