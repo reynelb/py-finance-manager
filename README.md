@@ -45,7 +45,7 @@ Installation
 3. Run the app:
    python web/app.py
 
-
+-------------------------
 
 📙 Español
 
@@ -78,7 +78,7 @@ Instalación
 3. Ejecuta la aplicación:
    python web/app.py
 
-
+------------------------------
 
 📗 Русский
 
