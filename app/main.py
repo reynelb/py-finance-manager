@@ -1,4 +1,3 @@
-# app/main.py
 from app.manager import FinanceManager
 from app.notifier import PaymentNotifier
 import time

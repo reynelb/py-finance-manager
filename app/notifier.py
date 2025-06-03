@@ -1,5 +1,4 @@
-# app/notifier.py
-from datetime import datetime, timedelta
+from datetime import datetime
 from app.manager import FinanceManager
 
 class PaymentNotifier:
