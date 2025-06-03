@@ -2,17 +2,17 @@
 
 A simple web-based application to manage your personal finances, track expenses and income, generate reports, and receive notifications.
 
-======================================================
+
 🌐 Contents / Contenido / Содержание
-======================================================
+
 
 - English
 - Español
 - Русский
 
-======================================================
+
 📘 English
-======================================================
+
 
 Description
 -----------
@@ -29,12 +29,10 @@ Technologies Used
 - Flask
 - SQLAlchemy
 - SQLite
-- Bootstrap (for UI)
 
 Installation
 ------------
-1. Clone the repository:
-   git clone https://github.com/yourusername/finance-manager.git
+1. Clone the repository
    cd finance-manager
 
 2. Create a virtual environment and install dependencies:
@@ -45,13 +43,9 @@ Installation
 3. Run the app:
    python web/app.py
 
-License
--------
-MIT License
-
 ======================================================
 📙 Español
-======================================================
+
 
 Descripción
 -----------
@@ -68,13 +62,10 @@ Tecnologías utilizadas
 - Flask
 - SQLAlchemy
 - SQLite
-- Bootstrap (para la interfaz)
 
 Instalación
 -----------
-1. Clona el repositorio:
-   git clone https://github.com/yourusername/finance-manager.git
-   cd finance-manager
+1. Clona el repositorio
 
 2. Crea un entorno virtual e instala las dependencias:
    python -m venv venv
@@ -84,13 +75,9 @@ Instalación
 3. Ejecuta la aplicación:
    python web/app.py
 
-Licencia
---------
-Licencia MIT
-
 ======================================================
 📗 Русский
-======================================================
+
 
 Описание
 --------
@@ -107,13 +94,10 @@ Licencia MIT
 - Flask
 - SQLAlchemy
 - SQLite
-- Bootstrap (для интерфейса)
 
 Установка
 ---------
-1. Клонируйте репозиторий:
-   git clone https://github.com/yourusername/finance-manager.git
-   cd finance-manager
+1. Клонируйте репозиторий
 
 2. Создайте виртуальное окружение и установите зависимости:
    python -m venv venv
@@ -123,6 +107,3 @@ Licencia MIT
 3. Запустите приложение:
    python web/app.py
 
-Лицензия
---------
-Лицензия MIT
