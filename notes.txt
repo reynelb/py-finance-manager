@@ -1,0 +1,4 @@
+
+add the telegram bot for notifications 
+quit the secret key stuff, and hide it from github
+tests

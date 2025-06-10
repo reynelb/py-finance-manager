@@ -48,7 +48,10 @@
     <h1>💸 Finance Manager</h1>
     <div style="text-align: right; margin-bottom: 1rem;">
         Logged in as <strong>{{ current_user.username }}</strong> |
-        <a href="{{ url_for('logout') }}">Logout</a>
+        <a href="{{ url_for('logout') }}">Logout</a><br>
+        <a href="{{ url_for('set_chat_id') }}">
+            <button style="padding: 0.4rem 1rem; margin-top: 1rem;">🔗 Set Telegram Chat ID</button>
+        </a>
     </div>
 
     <div class="section">
@@ -123,7 +126,6 @@
         <ul>
             {% for payment in payments %}
                 <li>{{ payment.description }} - due {{ payment.date }}</li>
-
             {% endfor %}
         </ul>
     </div>

@@ -1,10 +1,17 @@
 from app.manager import FinanceManager
 from app.notifier import PaymentNotifier
+from apscheduler.schedulers.background import BackgroundScheduler
 import time
 
 if __name__ == '__main__':
     fm = FinanceManager()
     notifier = PaymentNotifier(fm)
+
+    # === Start the scheduler ===
+    scheduler = BackgroundScheduler()
+    scheduler.add_job(notifier.check_payments, 'interval', hours=24)  # check daily
+    scheduler.start()
+    print("🔁 Payment notifier scheduler started.")
 
     while True:
         print("\n=== Personal Finance Manager ===")
@@ -26,8 +33,10 @@ if __name__ == '__main__':
         elif choice == '3':
             fm.show_report()
         elif choice == '4':
-            notifier.check_payments()
+            notifier.check_payments()  # also sends Telegram message
         elif choice == '5':
+            print("⛔ Exiting...")
+            scheduler.shutdown()
             break
         else:
             print("Invalid choice")

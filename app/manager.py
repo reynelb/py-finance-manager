@@ -1,6 +1,6 @@
 import os
 from datetime import datetime
-from sqlalchemy import create_engine, Column, Integer, Float, String, DateTime
+from sqlalchemy import create_engine, Column, Integer, Float, String, DateTime, ForeignKey
 from sqlalchemy.orm import sessionmaker, declarative_base
 from werkzeug.security import generate_password_hash, check_password_hash
 
@@ -18,12 +18,14 @@ class User(Base):
     id = Column(Integer, primary_key=True)
     username = Column(String, unique=True, nullable=False)
     password_hash = Column(String, nullable=False)
+    telegram_chat_id = Column(String, nullable=True)  # new field
 
     def set_password(self, password):
         self.password_hash = generate_password_hash(password)
 
     def check_password(self, password):
         return check_password_hash(self.password_hash, password)
+
 
 class Income(Base):
     __tablename__ = 'income'
@@ -44,6 +46,7 @@ class Payment(Base):
     id = Column(Integer, primary_key=True)
     description = Column(String, nullable=False)
     date = Column(String, nullable=False)  # ISO date string
+    user_id = Column(Integer, ForeignKey('users.id'), nullable=False)
 
 class Budget(Base):
     __tablename__ = 'budgets'

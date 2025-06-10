@@ -4,3 +4,4 @@ sqlalchemy
 werkzeug
 pytest
 tox
+python-telegram-bot
